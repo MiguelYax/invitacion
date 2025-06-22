@@ -8,8 +8,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>
-        <Container>
+      <body className='bg-info'>
+        <Container variant="info" >
           <Row className="justify-content-center">
             <Col xs={12} md={8} lg={6}>
               {children}
