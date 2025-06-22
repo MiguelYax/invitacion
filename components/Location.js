@@ -1,7 +1,8 @@
-import { Card, CardHeader, CardBody } from "react-bootstrap";
+import { Card, CardHeader, CardBody, CardFooter } from "react-bootstrap";
 import driveImage from '../public/drive.png';
 import walkImage from '../public/walk.png';
 import locationImage from '../public/location.png';
+import logoImg from '../public/location.jpg'
 import Image from 'next/image'
 
 const ubicacionDeCasa = "https://www.google.com/maps/place/14%C2%B054'48.2%22N+91%C2%B026'27.2%22W/@14.9130377,-91.4465571,2181m/data=!3m1!1e3!4m4!3m3!8m2!3d14.9133889!4d-91.4408889?entry=ttu&g_ep=EgoyMDI1MDYxNy4wIKXMDSoASAFQAw%3D%3D"
@@ -10,19 +11,27 @@ const rutaEnCarro = "https://www.google.com/maps/dir/Cuatro+Caminos/San+Crist%C3
 
 export default function Event() {
     return (
-        <Card className="mt-5">
+        <Card
+            className="mt-5"
+        >
+            <Image
+                className="card-img-top"
+                src={logoImg}
+               
+                alt="Ver en Google Maps"
+            />
             <CardHeader>
                 Como llegar a la casa:
             </CardHeader>
             <CardBody>
-                <ol>
+                <ul>
                     <li>
                         La casa se encuentra en la 6a. Avenida, Zona 2, Barrio San Sebastian, San Cristobal Totonicapan, Totonicapan, Guatemala.
                         <div className="text-center">
                             <a
-                            href={ubicacionDeCasa} 
-                            target="_blank"
-                            rel="noopener noreferrer"> 
+                                href={ubicacionDeCasa}
+                                target="_blank"
+                                rel="noopener noreferrer">
                                 <Image
                                     src={locationImage}
                                     width={200}
@@ -35,9 +44,9 @@ export default function Event() {
                     <li>
                         La casa se encuentra a 100 metros del puente marimba, en el Barrio San Sebastian. Ruta de cuatro caminos hacia el centro de la ciudad.
                         <div className="text-center">
-                            <a href={rutaCaminando} 
-                            target="_blank" rel="noopener noreferrer"> 
-                            <Image
+                            <a href={rutaCaminando}
+                                target="_blank" rel="noopener noreferrer">
+                                <Image
                                     src={walkImage}
                                     width={200}
                                     height={200}
@@ -52,10 +61,10 @@ export default function Event() {
                     <li>
                         Si vienes en carro desde cuatro caminos, toma la ruta hacia San Francisco El Alto, luego dobla a la Izquierda hacia San Sebastian.
                         <div className="text-center">
-                            <a href={rutaEnCarro} 
-                            className="text-center"
-                            target="_blank" 
-                            rel="noopener noreferrer">
+                            <a href={rutaEnCarro}
+                                className="text-center"
+                                target="_blank"
+                                rel="noopener noreferrer">
                                 <Image
                                     src={driveImage}
                                     width={200}
@@ -65,8 +74,11 @@ export default function Event() {
                             </a>
                         </div>
                     </li>
-                </ol>
+                </ul>
             </CardBody>
+            <CardFooter className="text-muted">
+                Si tienes alguna duda, puedes contactarme al numero de telefono: 3262-4246
+            </CardFooter>
         </Card>
     );
 }
