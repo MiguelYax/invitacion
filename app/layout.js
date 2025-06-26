@@ -8,7 +8,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className='bg-info'>
+      <body className='bg-info' style={{ fontSize: "2rem" }}>
         <Container variant="info" >
           <Row className="justify-content-center">
             <Col xs={12} md={8} lg={6}>

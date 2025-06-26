@@ -4,10 +4,7 @@ import logoImg from "../public/logo.png";
 
 export default function Event() {
     return (
-        <Card 
-        bg="primary"
-        text="white"
-        >
+        <Card>
             <Image
                 className="card-img-top"
                 src={logoImg}
@@ -17,11 +14,11 @@ export default function Event() {
                 Detalles del evento:
             </CardHeader>
             <CardBody>
-                Te invitamos a la inauguracion de nuestra nueva casa. Ven a celebrar con nosotros este momento especial. A degustar de un almuerzo especial y a disfrutar de la compañia de amigos y familiares.
+                Te invito a la inauguracion de mi hogar. Ven a compartir conmigo un momento importante. A degustar de un almuerzo especial y disfrutar de la compañia de amigos y familiares.
                 <hr />
                 Lugar: Barrio San Sebastian, 6a. Avenida, Zona 2, San Cristobal Totonicapan, Guatemala.
                 <hr />
-                Fecha: Sabado 5 de Julio de 2025, 12:00 PM.
+                Fecha: Sabado 5 de Julio de 2025, a partir de las 11:00 de la mañana.
             </CardBody>
         </Card>
     );

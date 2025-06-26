@@ -21,12 +21,12 @@ export default function Event() {
                 alt="Ver en Google Maps"
             />
             <CardHeader>
-                Como llegar a la casa:
+                Como llegar:
             </CardHeader>
             <CardBody>
                 <ul>
                     <li>
-                        La casa se encuentra en la 6a. Avenida, Zona 2, Barrio San Sebastian, San Cristobal Totonicapan, Totonicapan, Guatemala.
+                        Ubicacion: 6a. Avenida, Zona 2, Barrio San Sebastian, San Cristobal Totonicapan, Totonicapan, Guatemala.
                         <div className="text-center">
                             <a
                                 href={ubicacionDeCasa}
@@ -42,7 +42,7 @@ export default function Event() {
                         </div>
                     </li>
                     <li>
-                        La casa se encuentra a 100 metros del puente marimba, en el Barrio San Sebastian. Ruta de cuatro caminos hacia el centro de la ciudad.
+                        A 100 metros del puente marimba, en el Barrio San Sebastian. Ruta de cuatro caminos hacia el centro de la ciudad.
                         <div className="text-center">
                             <a href={rutaCaminando}
                                 target="_blank" rel="noopener noreferrer">
