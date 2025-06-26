@@ -22,8 +22,17 @@ const addDiv = (doc, name, y) => {
     doc.addImage(imgData, 'PNG', x, y, imgWidth, imgHeight);
 }
 
+const addBackground = (doc) => {
+    const img = readFileSync(`./pdf/img/bg.jpg`).toString('base64');
+    const imgData = `data:image/jpeg;base64,${img}`;
+
+
+    doc.addImage(imgData, 'JPEG', 0, 0, doc.internal.pageSize.getWidth(), doc.internal.pageSize.getHeight());
+}
+
 
 module.exports = {
     addQrCode,
-    addDiv
+    addDiv,
+    addBackground,
 };

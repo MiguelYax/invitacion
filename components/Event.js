@@ -9,7 +9,6 @@ export default function Event() {
             <Image
                 className="card-img-top"
                 src={logoImg}
-                alt="Ver en Google Maps"
             />
             <CardHeader className={fontHeaderClass}>
                 Detalles del evento:

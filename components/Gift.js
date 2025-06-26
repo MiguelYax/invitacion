@@ -4,15 +4,12 @@ import logoImg from "../public/gift.png";
 import Help from "./Help";
 import { fontHeaderClass } from './Font';
 
-export default function Event() {
+export default function Gift() {
     return (
-        <Card
-            className="mt-5"
-        >
+        <Card className="mt-5">
             <Image
                 className="card-img-top"
                 src={logoImg}
-                alt="Ver en Google Maps"
             />
             <CardHeader className={fontHeaderClass}>
                 Regalos y Obsequios:
@@ -24,17 +21,13 @@ export default function Event() {
                 <hr />
                 Si tienes el deseo de obsequiarme algo, te agradecería que consideraras lo siguiente:
                 <ul>
-                    <li> Dinero con sobre:</li>
+                    <li>Sobre con dinero:</li>
                     <ul>
                         <li> Puedes utilizar el sobre adjunto a la invitacion. </li>
                         <li> Puedes reutilizar algun sobre que tengas.</li>
                         <li> El dia del evento habran sobres disponibles.</li>
 
                     </ul>
-                    {/* <li>Transferencias: </li>
-                    <ul>
-                        <li>Banco Industrial: 1710033752. </li>
-                    </ul> */}
                 </ul>
             </CardBody>
             <CardFooter>
