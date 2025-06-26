@@ -8,7 +8,47 @@ const doc = new jsPDF({
 });
 
 const guests = [
-    "Josefina Yax"]
+  "Jose Cua",
+  "Gloria Cua",
+  "Ana Cua",
+  "Pedro Cua",
+  "Jesus Tzuban",
+  "Isabel Ramirez",
+  "Manuela Cua",
+  "Pablo Tax",
+  "Pedro Cua",
+  "Romario Garcia",
+  "Agustin Ajpop",
+  "Francisco Yax",
+  "Juan Yax",
+  "Josefina Yax",
+  "Amanda Tzunun",
+  "Flora Tzunun",
+  "Juana Tzunun",
+  "Leticia Tzunun",
+  "David Tzunun",
+  "Giobani Tzunun",
+  "Luis Yax",
+  "Juan Tzunun",
+  "Miguel Tzunun",
+  "Jesus Tzunun",
+  "Jose Yax",
+  "Juana Ajpacaja",
+  "Juana Ajpop",
+  "Jose Ajpop",
+  "Maria Tzunun",
+  "Micaela Tzunun",
+  "Francisco Tzunun",
+  "Jose Yax",
+  "Blanca Ramirez",
+  "Justa Tohom",
+  "Cristina Garcia",
+  "Rosa Cua",
+  "Julio Huitz",
+  "Fansisco Batz",
+  "Carlos Batz",
+  "Laureano Yax"
+];
 
 const page = (guestName, fontTitle, fontBody) => {
     setFont(fontTitle, "regular", 50);
@@ -25,7 +65,7 @@ const page = (guestName, fontTitle, fontBody) => {
     center("Barrio San Sebastián,", moveY(10));
     center("San Cristóbal Totonicapán.", moveY(10));
     addDiv(doc, 'bottom', moveY(10));
-    left("Sábado", moveY(30));
+    left("Sábado", moveY(35));
     left("5 Julio 2025", moveY(20));
     left("11:00 A.M.", moveY(20));
     addQrCode(doc);
@@ -33,11 +73,14 @@ const page = (guestName, fontTitle, fontBody) => {
 
 initFont(doc);
 
-for (const guest of guests) {
-    setY(0);
-    page(guest, "Cameliya", "Belanosima");
+const length = guests.length - 1;
+for (let i = 0; i < guests.length; i++) {
     
-    doc.addPage();
+    page(guests[i], 'Cameliya', 'Belanosima');
+    if (i !== length) {
+        doc.addPage();
+        setY(0);
+    }
 }
 
 doc.save("pdf/invitaciones.pdf");

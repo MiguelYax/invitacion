@@ -24,7 +24,7 @@ export default function Event() {
                 <hr />
                 Si tienes el deseo de obsequiarme algo, te agradecería que consideraras lo siguiente:
                 <ul>
-                    <li> Dinero en sobre:</li>
+                    <li> Dinero con sobre:</li>
                     <ul>
                         <li> Puedes utilizar el sobre adjunto a la invitacion. </li>
                         <li> Puedes reutilizar algun sobre que tengas.</li>

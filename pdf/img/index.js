@@ -4,10 +4,10 @@ const qrCode = readFileSync("./pdf/img/qr.png").toString('base64');
 
 const addQrCode = (doc) => {
     const imgData = `data:image/png;base64,${qrCode}`;
-    const imgWidth = 75;
-    const imgHeight = 75;
+    const imgWidth = 90;
+    const imgHeight = 90;
     const x = doc.internal.pageSize.getWidth() - (imgWidth + 20);
-    const y = doc.internal.pageSize.getHeight() - imgHeight - 15;
+    const y = doc.internal.pageSize.getHeight() - imgHeight - 5;
 
     doc.addImage(imgData, 'PNG', x, y, imgWidth, imgHeight);
 }
