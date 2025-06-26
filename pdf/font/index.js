@@ -31,6 +31,11 @@ const center = (text, y) => {
     doc.text(text, x, y);
 }
 
+const left = (text, y) => {
+    const x = 30; // Fixed left margin
+    doc.text(text, x, y);
+}
+
 let posY = 0;
 const moveY = (y) => posY += y;
 const setY = (y) => posY = y;
@@ -40,5 +45,6 @@ module.exports = {
     setFont,
     moveY,
     setY,
-    center
+    center,
+    left
 }

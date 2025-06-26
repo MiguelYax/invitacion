@@ -6,8 +6,8 @@ const addQrCode = (doc) => {
     const imgData = `data:image/png;base64,${qrCode}`;
     const imgWidth = 75;
     const imgHeight = 75;
-    const x = (doc.internal.pageSize.getWidth() - imgWidth) / 2;
-    const y = doc.internal.pageSize.getHeight() - imgHeight - 10;
+    const x = doc.internal.pageSize.getWidth() - (imgWidth + 20);
+    const y = doc.internal.pageSize.getHeight() - imgHeight - 15;
 
     doc.addImage(imgData, 'PNG', x, y, imgWidth, imgHeight);
 }
