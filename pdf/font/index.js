@@ -1,21 +1,22 @@
 const { readFileSync } = require("fs");
 
-const Cameliya = readFileSync("./pdf/font/Cameliya.ttf").toString('base64');
-const BelanosimaBold = readFileSync("./pdf/font/Belanosima-Bold.ttf").toString('base64');
-const BelanosimaRegular = readFileSync("./pdf/font/Belanosima-Regular.ttf").toString('base64');
-
 let doc;
+
+const addFont = (fontName, style) => {
+    const rawFont = readFileSync(`./pdf/font/${fontName}-${style}.ttf`).toString('base64');
+    doc.addFileToVFS(`${fontName}-${style}.ttf`, rawFont);
+    doc.addFont(`${fontName}-${style}.ttf`, fontName, style.toLowerCase());
+}
 
 const initFont = (document) => {
     doc = document;
-    doc.addFileToVFS("Cameliya.ttf", Cameliya);
-    doc.addFont("Cameliya.ttf", "Cameliya", "normal");
+    addFont("Cameliya", "Regular");
+    addFont("Belanosima", "Bold");
+    addFont("Belanosima", "Regular");
+    addFont("Lobster", "Regular");
+    addFont("Parisienne", "Regular");
+    addFont("Outfit", "Regular");
 
-    doc.addFileToVFS("Belanosima-Bold.ttf", BelanosimaBold);
-    doc.addFont("Belanosima-Bold.ttf", "Belanosima", "bold");
-
-    doc.addFileToVFS("Belanosima-Regular.ttf", BelanosimaRegular);
-    doc.addFont("Belanosima-Regular.ttf", "Belanosima", "normal");
 }
 
 const setFont = (fontName, style, size) => {
@@ -32,7 +33,7 @@ const center = (text, y) => {
 
 let posY = 0;
 const moveY = (y) => posY += y;
-const setY = (y) => posY = 0;
+const setY = (y) => posY = y;
 
 module.exports = {
     initFont,

@@ -8,28 +8,20 @@ const doc = new jsPDF({
 });
 
 const guests = [
-    "Juan Pérez",
-    "María López",
-    "Carlos García",
-    "Ana Martínez",
-    "Luis Fernández",
-    "Sofía Rodríguez",
-    "Pedro Sánchez",
-    "Laura Gómez",
-    "Javier Díaz",
-    "Isabel Torres"
+    "Josefina Yax",
 ];
 
-const page = (guestName) => {
-    setFont("Cameliya", "normal", 44);
-    center("Fiesta de Inauguración", moveY(50));
-    setFont("Belanosima", "normal", 24);
+const page = (guestName, fontTitle, fontBody) => {
+    setFont(fontTitle, "regular", 50);
+    center("Fiesta de Inauguración", moveY(40));
+    setFont(fontBody, "regular", 28);
     center("Miguel de Jesús Yax Tzunún", moveY(30));
     center("Tiene el honor de invitarlo invitarlo:", moveY(10));
     center(`${guestName} y familia. `, moveY(10));
     center("Al almuerzo de inauguración de su casa.", moveY(10));
     addDiv(doc, 'top', moveY(20));
-    center("Sábado 25 de Julio de 2025 - 12:00 PM", moveY(20));
+    setFont(fontBody, "regular", 24);
+    center("Sábado 25 de Julio de 2025 - 12:00 PM", moveY(25));
     center("Barrio San Sebastian, 6a. Avenida, Zona 2.", moveY(10));
     center("San Cristóbal Totonicapán.", moveY(10));
     addDiv(doc, 'bottom', moveY(10));
@@ -37,13 +29,16 @@ const page = (guestName) => {
 }
 
 initFont(doc);
-for (const guest of guests) {
-    setY(0);
-    page(guest);
-    if (guest !== guests[guests.length - 1]) {
-        doc.addPage();
-    }
-}
+page("Josefina Yax", "Belanosima", "Outfit");
+doc.addPage();
+setY(0);
+page("Josefina Yax", "Cameliya", "Belanosima");
+doc.addPage();
+setY(0);
+page("Josefina Yax", "Lobster", "Belanosima");
+doc.addPage();
+setY(0);
+page("Josefina Yax", "Parisienne", "Lobster");
 
 
-doc.save("pdf/a4.pdf");
+doc.save("pdf/invitaciones.pdf");
