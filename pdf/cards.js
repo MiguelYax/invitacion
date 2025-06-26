@@ -16,13 +16,13 @@ const page = (guestName, fontTitle, fontBody) => {
     center("Fiesta de Inauguración", moveY(40));
     setFont(fontBody, "regular", 28);
     center("Miguel de Jesús Yax Tzunún", moveY(30));
-    center("Tiene el honor de invitarlo invitarlo:", moveY(10));
+    center("Tiene el honor de invitarlo:", moveY(10));
     center(`${guestName} y familia. `, moveY(10));
     center("Al almuerzo de inauguración de su casa.", moveY(10));
     addDiv(doc, 'top', moveY(20));
     setFont(fontBody, "regular", 24);
     center("Sábado 25 de Julio de 2025 - 12:00 PM", moveY(25));
-    center("Barrio San Sebastian, 6a. Avenida, Zona 2.", moveY(10));
+    center("6a. Avenida, Zona 2, Barrio San Sebastian,", moveY(10));
     center("San Cristóbal Totonicapán.", moveY(10));
     addDiv(doc, 'bottom', moveY(10));
     addQrCode(doc);
