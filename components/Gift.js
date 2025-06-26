@@ -1,6 +1,8 @@
 import { Card, CardHeader, CardBody, CardFooter } from "react-bootstrap";
 import Image from "next/image";
 import logoImg from "../public/gift.png";
+import Help from "./Help";
+import { fontHeaderClass } from './Font';
 
 export default function Event() {
     return (
@@ -12,7 +14,7 @@ export default function Event() {
                 src={logoImg}
                 alt="Ver en Google Maps"
             />
-            <CardHeader>
+            <CardHeader className={fontHeaderClass}>
                 Regalos y Obsequios:
             </CardHeader>
             <CardBody>
@@ -23,21 +25,20 @@ export default function Event() {
                 Si tienes el deseo de obsequiarme algo, te agradecería que consideraras lo siguiente:
                 <ul>
                     <li> Dinero en sobre:</li>
-                    <ul> 
-                    <li> Puedes utilizar el sobre adjunto a la invitacion. </li>
+                    <ul>
+                        <li> Puedes utilizar el sobre adjunto a la invitacion. </li>
                         <li> Puedes reutilizar algun sobre que tengas.</li>
                         <li> El dia del evento habran sobres disponibles.</li>
 
                     </ul>
-                    <li>Transferencias: </li>
+                    {/* <li>Transferencias: </li>
                     <ul>
                         <li>Banco Industrial: 1710033752. </li>
-                    </ul>
+                    </ul> */}
                 </ul>
             </CardBody>
             <CardFooter>
-                Si tienes alguna duda sobre qué traer, no dudes en contactarnos.
-                ¡Esperamos verte y compartir juntos este día tan especial!
+                <Help />
             </CardFooter>
         </Card>
     );

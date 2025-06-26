@@ -22,7 +22,7 @@ const page = (guestName, fontTitle, fontBody) => {
     addDiv(doc, 'top', moveY(10));
     setFont(fontBody, "regular", 36);
     center("6a. Avenida, Zona 2,", moveY(25));
-    center("Barrio San Sebastian,", moveY(10));
+    center("Barrio San Sebastián,", moveY(10));
     center("San Cristóbal Totonicapán.", moveY(10));
     addDiv(doc, 'bottom', moveY(10));
     left("Sábado", moveY(30));

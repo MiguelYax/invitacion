@@ -1,5 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Row, Col } from "react-bootstrap";
+import {  fontBodyClass } from '../components/Font';
 
 export const metadata = {
   title: "Bienvenidos",
@@ -8,7 +9,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className='bg-info' style={{ fontSize: "2rem" }}>
+      <body className={`bg-info ${fontBodyClass}`} style={{ fontSize: "1.8rem", }}>
         <Container variant="info" >
           <Row className="justify-content-center">
             <Col xs={12} md={8} lg={6}>
@@ -17,6 +18,6 @@ export default function RootLayout({ children }) {
           </Row>
         </Container>
       </body>
-    </html>
+    </html >
   );
 }
