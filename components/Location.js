@@ -58,7 +58,7 @@ export default function Event() {
                         </div>
                     </li>
                     <li>
-                        Si vienes desde el centro de la ciudad, toma la 6a. avenida Pasando la casa de Don Adrian, Cotinua hacia el callego del puente marimba.
+                        Si vienes desde el centro de la ciudad, toma la 6a. avenida Pasando la casa de Don Adrian, Cotinua hacia el callejón del puente marimba.
                     </li>
                     <li>
                         Si vienes en carro desde cuatro caminos, toma la ruta hacia San Francisco El Alto, luego dobla a la Izquierda hacia San Sebastian.
