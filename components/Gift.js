@@ -18,8 +18,8 @@ export default function Event() {
                 Regalos y Obsequios:
             </CardHeader>
             <CardBody>
-                <p>
-                    Recuerda que lo más importante es celebrar juntos este momento especial.
+                <p className={fontHeaderClass}>
+                    Recuerda que lo más importante es celebrar juntos este momento especial!
                 </p>
                 <hr />
                 Si tienes el deseo de obsequiarme algo, te agradecería que consideraras lo siguiente:

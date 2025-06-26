@@ -3,7 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import {  fontBodyClass } from '../components/Font';
 
 export const metadata = {
-  title: "Bienvenidos",
+  title: "Fiesta de Inauguración",
 };
 
 export default function RootLayout({ children }) {
